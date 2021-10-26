@@ -1,10 +1,12 @@
 import express from 'express';
 import router, { ReqInst } from './routes';
 import { IPAKitDB } from 'db';
+import { config } from 'dotenv';
+config();
 
 export class IPAKit {
 	app = express();
-	port = 3000;
+	port = typeof process.env.PORT !== 'undefined' ? parseInt(process.env.PORT) : 3000;
 	db: IPAKitDB
 	constructor() {
 		this.init();
@@ -25,3 +27,5 @@ export class IPAKit {
 		});
 	}
 }
+
+new IPAKit();
