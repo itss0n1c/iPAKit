@@ -20,6 +20,7 @@ export class IPAKit {
 			req.inst = this;
 			return next();
 		});
+		this.app.set('json spaces', 4);
 		this.app.use('/', router);
 
 		this.app.listen(this.port, () => {
