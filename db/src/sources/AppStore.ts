@@ -71,12 +71,7 @@ const handleRes = (bundleIdRes: AppStoreRes, nameRes: AppStoreRes): RawApp[] => 
 			}
 			throw 404;
 		}
-		return [ {
-			name: res.trackCensoredName,
-			bundle_id: res.bundleId,
-			icon: res.artworkUrl512,
-			author: res.artistName
-		} ];
+		throw 404;
 	}
 	if (names.length > 0) {
 		return names.map(app => ({
@@ -86,6 +81,7 @@ const handleRes = (bundleIdRes: AppStoreRes, nameRes: AppStoreRes): RawApp[] => 
 			author: app.artistName
 		}));
 	}
+	throw 404;
 };
 
 appstore.run(async (q, prov) => {
