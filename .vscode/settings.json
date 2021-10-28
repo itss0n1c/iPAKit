@@ -1,6 +1,6 @@
 {
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        "source.fixAll": true
     },
     "files.insertFinalNewline": true,
     "files.eol": "\n",

@@ -6,6 +6,7 @@
   "private": true,
   "workspaces": [
     "api",
+    "site",
     "db"
   ],
   "author": "S0n1c <itss0n1cdev@gmail.com>",
