@@ -23,6 +23,9 @@ import Endpoint from "./Endpoint.svelte";
 	<div class="container">
 		<div class="title">IPAKit</div>
 		<div class="subtitle">A FOSS API for finding iOS Apps.</div>
+		<div class="buttons">
+			<a href="https://github.com/IPAKit-Team/IPAKit" rel="noopener" target="_blank" class="button bg-github color-white"><i class="fab fa-github"></i><span>View on Github</span></a>
+		</div>
 	</div>
   </section>
   <section class="api">
@@ -89,6 +92,19 @@ import Endpoint from "./Endpoint.svelte";
 		font-size: 2rem;
 		font-weight: 400;
 	}
+
+	section.header .buttons {
+		margin-top: 1rem;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	section.header .buttons .button > span {
+		margin-left: 0.5rem;
+	}
+
+	
    
 	section.api .title {
 		font-size: 2rem;
