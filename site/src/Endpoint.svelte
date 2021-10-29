@@ -157,5 +157,19 @@ import 'highlight.js/styles/atom-one-dark.css'
 		   }
 		  
 	 }
+
+	 @media only screen and (max-width: 820px) {
+		main {
+			padding:1rem;
+		}
+
+		.endpoint {
+			font-size: 0.8rem;
+		}
+
+		.results {
+			font-size: 0.5rem;
+		}
+	}
  
 </style>

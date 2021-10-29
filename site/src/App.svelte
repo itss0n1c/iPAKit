@@ -84,13 +84,14 @@ import Endpoint from "./Endpoint.svelte";
 	}
 
 	section.header .title {
-		font-size: 2.5rem;
-		font-weight: 100;
+		font-size: 2rem;
+		font-weight: 700;
 	}
 
 	section.header .subtitle {
-		font-size: 2rem;
-		font-weight: 400;
+		font-size: 1rem;
+		font-weight: 500;
+		opacity: 0.7;
 	}
 
 	section.header .buttons {
@@ -107,7 +108,7 @@ import Endpoint from "./Endpoint.svelte";
 	
    
 	section.api .title {
-		font-size: 2rem;
+		font-size: 1.5rem;
 		font-weight: 700;
 	}
 	
@@ -136,9 +137,10 @@ import Endpoint from "./Endpoint.svelte";
 	
    
 	 @media only screen and (max-width: 820px) {
-		   main {
-			padding: 2rem;
+		section:not(.header) {
+			padding: 1rem;
 		}
+		
 	}
    
 	 @media (prefers-color-scheme: dark) {
