@@ -38,6 +38,11 @@ import Endpoint from "./Endpoint.svelte";
 		  </div>
 	  </div>
   </section>
+  <section class="footer">
+	<p>Made with <i class="fas fa-heart color-red"></i> and <i class="fas fa-code color-gray"></i> by <a href="https://github.com/IPAKit-Team" class="link color-blue" rel="noopener" target="_blank">IPAKit Team</a></p>
+  </section>
+
+	
 </main>
 
 <style global lang="scss">
@@ -111,6 +116,14 @@ import Endpoint from "./Endpoint.svelte";
 		font-size: 1.5rem;
 		font-weight: 700;
 	}
+
+	section.footer {
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.5rem;
+		opacity: 0.5;
+	}
 	
    
 	 form {
@@ -150,7 +163,7 @@ import Endpoint from "./Endpoint.svelte";
 		 box-shadow: unset;
 		   }
 	   html, body, main {
-		 background: #1C1C1E;
+		 background: #111;
 		 color: white;
 	   }
    
@@ -159,7 +172,7 @@ import Endpoint from "./Endpoint.svelte";
 	   }
 
 	   section.header {
-		   background: #222;
+		   background: #171717;
 		   border-bottom: none;
 	   }
 	 }

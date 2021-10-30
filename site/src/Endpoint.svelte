@@ -62,7 +62,7 @@ import 'highlight.js/styles/atom-one-dark.css'
 	<div class="queries">
 		{#each Object.keys(queries) as k}
 			<div class="query input-field">
-				<input type="url" placeholder={k} bind:value={queries[k]}  />
+				<input type="text" placeholder={k} bind:value={queries[k]}  />
 			</div>
 		{/each}
 	</div>
@@ -109,7 +109,7 @@ import 'highlight.js/styles/atom-one-dark.css'
 		overflow-x: hidden;
 	}
 
-	.input-field input[type='url'] {
+	.input-field input[type='text'] {
 		   background: #fff;
 		   border: 0;
 		   padding: 0.6rem;
@@ -124,7 +124,7 @@ import 'highlight.js/styles/atom-one-dark.css'
 		   border: 1px solid rgba(100, 100, 100, 0.1);
 	   }
    
-	 .input-field input[type='url']:focus {
+	 .input-field input[type='text']:focus {
 	   outline: none;
 	 }  
 	   
@@ -142,17 +142,17 @@ import 'highlight.js/styles/atom-one-dark.css'
 	   @media (prefers-color-scheme: dark) {
 
 		.endpoint {
-			background: #333;
+			background: #222;
 			color: #888;
 		}
-		   .input-field input[type='url'] {
-			   background: #333;
-			   color: white;
+		   .input-field input[type='text'] {
+			   background: #222;
+			   color: #ccc;
 		 box-shadow: unset;
 		   }
 	  
 		   main {
-			   background: #1f1f1f;
+			   background: #171717;
 
 		   }
 		  
