@@ -70,8 +70,17 @@ const handleRes = (bundleIdRes: AppStoreRes, nameRes: AppStoreRes): RawApp[] => 
 				} ];
 			}
 			throw 404;
+		} else {
+			const find = ids[0];
+			return [
+				{
+					name: find.trackCensoredName,
+					bundle_id: find.bundleId,
+					icon: find.artworkUrl512,
+					author: find.artistName
+				}
+			];
 		}
-		throw 404;
 	}
 	if (names.length > 0) {
 		return names.map(app => ({

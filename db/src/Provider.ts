@@ -16,11 +16,11 @@ export interface RawApp {
 
 export interface ProviderConstructor {
 	name: string
-	url: string
+	url?: string
 }
 
 // eslint-disable-next-line no-unused-vars
-export type ProviderRes<T> = (q: Partial<SearchQuery>, prov: T) => Promise<RawApp[]> | RawApp[];
+export type ProviderRes<T> = (q: Partial<SearchQuery>, prov: T) => Promise<Partial<RawApp>[]> | Partial<RawApp>[];
 
 export interface ResponseTypes<T = any> {
 	json: T,
@@ -73,7 +73,7 @@ export class Provider implements ProviderConstructor {
 
 	async handle(q: Partial<SearchQuery>): Promise<App[]> {
 		const app = await this.search(q, this);
-		return app.map(a => ({ ...a,
+		return app.map(a => ({ ...a as RawApp,
 			provider: this }));
 	}
 }
