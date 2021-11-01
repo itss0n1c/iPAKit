@@ -1,0 +1,133 @@
+@import './theme.scss';
+
+.button {
+	color: #fff;
+	border-radius: 0.5rem;
+	padding: 0.5rem 1rem;
+	border: none;
+	text-decoration: none;
+	font-size:inherit;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: opacity 0.15s ease-in-out;
+	appearance: none;
+	-webkit-appearance: none;
+}
+
+.button.inline {
+	display:unset;
+}
+
+.button.small {
+	padding: 0.2rem 0.5rem;
+	font-size: 1rem;
+}
+
+.button a {
+	text-decoration: none;
+}
+
+.button:active {
+	opacity: 0.4;
+}
+
+.button:hover {
+	opacity: 0.8;
+}
+
+.button.rounded {
+	border-radius: 0.8rem;
+}
+
+.button.rounded.full {
+	border-radius: 100%;
+}
+
+.button.bold {
+	font-weight: 700;
+}
+
+.link {
+	text-decoration: none;
+}
+
+$shades: ("100": 0.1, "200": 0.2, "300": 0.3, "400": 0.4, "500": 0.5, "600": 0.6, "700": 0.7, "800":0.8, "900": 0.9);
+
+@each $color, $hex in $colors {
+	.color-#{$color} {
+		color: $hex;
+	}
+	.bg-#{$color} {
+		background-color: $hex;
+	}
+
+	@each $sn, $shade in $shades {
+		.bg-#{$color}-#{$sn} {
+			background-color: rgba($hex, $shade)
+		}
+	}
+
+	.button.bg-#{$color} {
+		background-color: $hex;
+	}
+	.button.bg-#{$color}.shadow {
+		box-shadow: 0px 0px 10px #{$hex}77;
+	}
+}
+
+
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #fff;
+	padding:0;
+}
+
+
+
+h1 {
+	font-size: 2em;
+}
+
+a {
+	color: inherit;
+}
+
+code pre {
+	font-family: menlo, inconsolata, monospace;
+	font-size: calc(1em - 2px);
+	color: #aaa;
+	background-color: #3a3a3a;
+	padding: 1rem;
+	border-radius: 2px;
+}
+
+@media (min-width: 400px) {
+	body {
+		font-size: 16px;
+	}
+}
+
+ul.unstyled {
+	margin-top: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+
+.gray {
+	color: rgba(255,255,255,.4)!important
+}
+
+.hidden {
+	display:none !important;
+}
