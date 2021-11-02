@@ -1,6 +1,6 @@
 {
-  "name": "db",
-  "version": "1.0.0",
+  "name": "ipakit",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
@@ -19,5 +19,7 @@
   },
   "dependencies": {
     "node-fetch": "^2.6.5"
-  }
+  },
+  "author": "S0n1c <itss0n1cdev@gmail.com>",
+  "repository": "git@github.com:itss0n1c/iPAKit.git"
 }

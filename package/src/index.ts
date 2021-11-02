@@ -3,16 +3,31 @@ import appstore from './sources/AppStore';
 import BuiltIn from './sources/BuiltIn';
 import ipacandy from './sources/IPACandy';
 
+export { Provider, RawApp, SearchQuery };
+
 export interface App extends RawApp {
 	provider: Provider
 }
 
-export class IPAKitDB {
+export interface IPAKitOptions {
 	providers: Provider[]
+}
 
-	async init(): Promise<void> {
-		this.providers = [ ipacandy, appstore, BuiltIn ];
+export default class IPAKit {
+	providers = [ ipacandy, appstore, BuiltIn ]
+
+	constructor(opts?: Partial<IPAKitOptions>) {
+		if (typeof opts === 'undefined') {
+			opts = {};
+		}
+		if (typeof opts.providers === 'undefined') {
+			opts.providers = [];
+		}
+		for (const provider of opts.providers) {
+			this.providers.push(provider);
+		}
 	}
+
 
 	async search(q: Partial<SearchQuery>): Promise<App[]> {
 		let found: App[] = [];
@@ -39,3 +54,4 @@ export class IPAKitDB {
 		return found;
 	}
 }
+export { IPAKit };

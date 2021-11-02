@@ -1,9 +1,9 @@
-import { SearchQuery } from 'db/dist/Provider';
+import { SearchQuery } from 'ipakit';
 import { Request, Router as app } from 'express';
-import { IPAKit } from '..';
+import { IPAKitAPI } from '..';
 
 export interface ReqInst extends Request {
-	inst: IPAKit
+	inst: IPAKitAPI
 	query: Partial<SearchQuery>
 }
 

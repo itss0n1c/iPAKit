@@ -1,5 +1,5 @@
 {
-  "name": "ipakit",
+  "name": "ipakit-workspace",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -7,7 +7,7 @@
   "workspaces": [
     "api",
     "site",
-    "db"
+    "package"
   ],
   "author": "S0n1c <itss0n1cdev@gmail.com>",
   "repository": "git@github.com:itss0n1c/iPAKit.git"
