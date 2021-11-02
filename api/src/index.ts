@@ -2,6 +2,7 @@ import express from 'express';
 import router, { ReqInst } from './routes';
 import { IPAKitDB } from 'db';
 import { config } from 'dotenv';
+import cors from 'cors';
 config();
 
 export class IPAKit {
@@ -16,6 +17,7 @@ export class IPAKit {
 		this.db = new IPAKitDB();
 		await this.db.init();
 
+		this.app.use(cors());
 		this.app.use((req: ReqInst, res, next) => {
 			req.inst = this;
 			return next();

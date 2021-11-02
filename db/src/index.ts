@@ -1,5 +1,6 @@
 import { Provider, RawApp, SearchQuery } from './Provider';
 import appstore from './sources/AppStore';
+import BuiltIn from './sources/BuiltIn';
 import ipacandy from './sources/IPACandy';
 
 export interface App extends RawApp {
@@ -10,7 +11,7 @@ export class IPAKitDB {
 	providers: Provider[]
 
 	async init(): Promise<void> {
-		this.providers = [ ipacandy, appstore ];
+		this.providers = [ ipacandy, appstore, BuiltIn ];
 	}
 
 	async search(q: Partial<SearchQuery>): Promise<App[]> {
@@ -25,6 +26,15 @@ export class IPAKitDB {
 			}
 			found = [ ...found, ...apps ];
 		}
+		if (typeof q.bundle_id !== 'undefined') {
+			if (typeof q.name !== 'undefined') {
+				found = found.filter(a => a.bundle_id === q.bundle_id && a.name.toLowerCase().includes(q.name.toLowerCase()));
+			} else {
+				console.log(q.bundle_id, found);
+				found = found.filter(a => a.bundle_id.toLowerCase() === q.bundle_id.toLowerCase());
+			}
+		}
+
 		console.log(found);
 		return found;
 	}

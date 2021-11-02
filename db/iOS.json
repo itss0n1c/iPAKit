@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Settings",
+		"bundle_id": "com.apple.Preferences"
+	},
+	{
+		"name": "AppStore",
+		"bundle_id": "com.apple.AppStore"
+	},
+	{
+		"name": "QR Code Reader",
+		"bundle_id": "com.apple.barcodesupport.qrcode"
+	}
+]
