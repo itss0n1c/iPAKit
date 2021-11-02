@@ -24,7 +24,7 @@ import Endpoint from "./Endpoint.svelte";
 		<div class="title">IPAKit</div>
 		<div class="subtitle">A FOSS API for finding iOS Apps.</div>
 		<div class="buttons">
-			<a href="https://github.com/IPAKit-Team/IPAKit" rel="noopener" target="_blank" class="button bg-github color-white"><i class="fab fa-github"></i><span>View on Github</span></a>
+			<a href="https://github.com/itss0n1c/IPAKit" rel="noopener" target="_blank" class="button bg-github color-white"><i class="fab fa-github"></i><span>View on Github</span></a>
 		</div>
 	</div>
   </section>
