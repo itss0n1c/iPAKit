@@ -8,7 +8,27 @@
 		"bundle_id": "com.apple.AppStore"
 	},
 	{
-		"name": "QR Code Reader",
-		"bundle_id": "com.apple.barcodesupport.qrcode"
+		"name": "Feedback",
+		"bundle_id": "com.apple.appleseed.feedbackassistant"
+	},
+	{
+		"name": "Diagnostics",
+		"bundle_id": "com.apple.diagnostics"
+	},
+	{
+		"name": "Xcode Preview",
+		"bundle_id": "com.apple.dt.xcodepreviews"
+	},
+	{
+		"name": "Print Center",
+		"bundle_id": "com.apple.printerkit.print-center"
+	},
+	{
+		"name": "Sidecar",
+		"bundle_id": "com.apple.sidecar"
+	},
+	{
+		"name": "Siri",
+		"bundle_id": "com.apple.siri"
 	}
 ]
