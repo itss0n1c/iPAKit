@@ -14,7 +14,7 @@ export interface IPAKitOptions {
 }
 
 export default class IPAKit {
-	providers = [ ipacandy, appstore, BuiltIn ]
+	providers = [ BuiltIn, ipacandy, appstore ]
 
 	constructor(opts?: Partial<IPAKitOptions>) {
 		if (typeof opts === 'undefined') {

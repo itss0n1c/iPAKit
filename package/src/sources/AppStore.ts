@@ -63,7 +63,7 @@ const handleRes = (bundleIdRes: AppStoreRes, nameRes: AppStoreRes): RawApp[] => 
 			const find = names.find(a => a.bundleId === res.bundleId);
 			if (typeof find !== 'undefined') {
 				return [ {
-					name: find.trackCensoredName,
+					name: find.trackName,
 					bundle_id: find.bundleId,
 					icon: find.artworkUrl512,
 					author: find.artistName
@@ -74,7 +74,7 @@ const handleRes = (bundleIdRes: AppStoreRes, nameRes: AppStoreRes): RawApp[] => 
 			const find = ids[0];
 			return [
 				{
-					name: find.trackCensoredName,
+					name: find.trackName,
 					bundle_id: find.bundleId,
 					icon: find.artworkUrl512,
 					author: find.artistName
@@ -84,7 +84,7 @@ const handleRes = (bundleIdRes: AppStoreRes, nameRes: AppStoreRes): RawApp[] => 
 	}
 	if (names.length > 0) {
 		return names.map(app => ({
-			name: app.trackCensoredName,
+			name: app.trackName,
 			bundle_id: app.bundleId,
 			icon: app.artworkUrl512,
 			author: app.artistName
