@@ -1,4 +1,7 @@
-export const api = 'https://api.ipakit.dev';
+import manifest from '../../manifest.json';
+export { manifest };
+
+export const api = manifest.api.url;
 
 export interface IPAKitRes<T> {
 	resultCount: number

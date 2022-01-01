@@ -10,7 +10,7 @@ export interface SearchQuery {
 export interface RawApp {
 	name: string
 	bundle_id: string
-	icon: string
+	icon: string | Uint8Array
 	author: string
 }
 

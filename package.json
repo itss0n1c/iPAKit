@@ -5,10 +5,21 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
+    "manifest",
     "api",
     "site",
     "package"
   ],
+  "scripts": {
+    "api": "yarn workspace api dev",
+    "site": "yarn workspace site dev",
+    "kit": "yarn workspace ipakit dev",
+    "build:manifest": "yarn workspace manifest build",
+    "build:kit": "yarn workspace ipakit build",
+    "build:api": "yarn workspace api build",
+    "build:site": "yarn workspace site build",
+    "build": "yarn build:manifest && yarn build:kit"
+  },
   "author": "S0n1c <itss0n1cdev@gmail.com>",
   "repository": "git@github.com:itss0n1c/iPAKit.git"
 }

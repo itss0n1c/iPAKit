@@ -1,0 +1,14 @@
+{
+	"api": {
+		"https": false,
+		"host": "s0n1c-mbp.local",
+		"port": 6320,
+		"url": "http://s0n1c-mbp.local:6320"
+	},
+	"site": {
+		"https": false,
+		"host": "s0n1c-mbp.local",
+		"port": 3000,
+		"url": "http://s0n1c-mbp.local:3000"
+	}
+}

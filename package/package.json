@@ -18,7 +18,8 @@
     "typescript": "^4.4.2"
   },
   "dependencies": {
-    "node-fetch": "^2.6.5"
+    "node-fetch": "^2.6.5",
+    "nuru": "^1.0.7"
   },
   "author": "S0n1c <itss0n1cdev@gmail.com>",
   "repository": "git@github.com:itss0n1c/iPAKit.git"
