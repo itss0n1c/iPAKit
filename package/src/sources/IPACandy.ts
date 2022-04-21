@@ -5,15 +5,33 @@ const ipacandy = new Provider({
 	url: 'https://api.ipacandy.com'
 });
 
-interface IPACandyApp {
+interface CleanAppBuild {
+	id: string
 	name: string
-	rawdesc: string
-	icon: string
-	author: string
-	bundleid: string
+	version: string
+	size: number
+	parsedTime: number
+	url: string
+	altIcon?: string
+	icon?: string
 }
 
-interface IPACandyRes<T = IPACandyApp[]> {
+interface CleanApp {
+	id: string
+	bundleId: string
+	name: string
+	author: string
+	type: 'native' | 'web'
+	public: boolean
+	description: string
+	screenshots: string[]
+	full: boolean
+	category: string
+	tweaked: boolean
+	builds: CleanAppBuild[]
+}
+
+interface IPACandyRes<T = CleanApp[]> {
 	status: boolean
 	data?: T
 	error?: T
@@ -37,14 +55,14 @@ ipacandy.run(async (q, prov) => {
 			nameMatches = obj.name.toLowerCase().includes(q.name.toLowerCase());
 		}
 		if (typeof q.bundle_id !== 'undefined') {
-			bundleIDMatches = obj.bundleid === q.bundle_id;
+			bundleIDMatches = obj.bundleId === q.bundle_id;
 		}
 		return nameMatches || bundleIDMatches;
 	});
 	return find.map(a => ({
 		name: a.name,
-		bundle_id: a.bundleid,
-		icon: a.icon,
+		bundle_id: a.bundleId,
+		icon: prov.urlWithPath(`/icon/${a.id}`),
 		author: a.author
 	}));
 });
