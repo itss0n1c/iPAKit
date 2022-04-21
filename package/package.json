@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc -p .",
-    "dev": "ts-node-dev ./tests/index.ts"
+    "dev": "ts-node-dev ./tests/repl.ts"
   },
   "devDependencies": {
     "@types/node": "^16.7.2",
