@@ -1,13 +1,13 @@
 import express from 'express';
 import router, { ReqInst } from './routes';
 import { IPAKit } from 'ipakit';
-import { config } from 'dotenv';
 import cors from 'cors';
-config();
+import { manifest } from 'manifest';
+
 
 export class IPAKitAPI {
 	app = express();
-	port = typeof process.env.PORT !== 'undefined' ? parseInt(process.env.PORT) : 3000;
+	port = manifest.config.api.port;
 	db: IPAKit
 	constructor() {
 		this.init();
